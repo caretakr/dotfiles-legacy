@@ -1,0 +1,35 @@
+#! /bin/sh
+
+#
+# Antigen config
+#
+
+# Set bundles
+antigen bundles <<EOF
+# From Oh My ZSH
+command-not-found
+git
+gpg-agent
+sudo
+
+# Autosuggestions
+zsh-users/zsh-autosuggestions
+
+# More completions
+zsh-users/zsh-completions
+
+# History substring search
+zsh-users/zsh-history-substring-search
+
+# Syntax highlighting
+zsh-users/zsh-syntax-highlighting
+
+# Alias suggestions
+MichaelAquilina/zsh-you-should-use
+EOF
+
+# Set theme
+antigen theme romkatv/powerlevel10k
+
+# Apply it
+antigen apply

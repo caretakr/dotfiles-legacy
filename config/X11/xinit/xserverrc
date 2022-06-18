@@ -1,0 +1,8 @@
+#!/bin/sh
+
+#
+# Xserver startup
+#
+
+exec /usr/bin/Xorg -nolisten tcp -nolisten local "$@" "vt$XDG_VTNR" \
+    -keeptty >"$HOME/.local/share/xorg/Xorg.log" 2>&1
