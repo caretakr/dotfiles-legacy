@@ -31,12 +31,23 @@ for m in "$(xrandr --query | grep " connected")"; do
     FONT2="FiraMono Nerd Font Mono:size=28;4"
     FONT3="FiraMono Nerd Font Mono:size=22;6"
   fi
+done
+
+
+  if [ "$(cat /sys/devices/virtual/dmi/id/sys_vendor)" = "Dell Inc." ]; then
+    if [ "$(cat /sys/devices/virtual/dmi/id/product_name)" = "XPS 13 9310" ]; then
+      if [ "$m" = "" ]; then
+    fi
+  fi
 
   MONITOR="$(echo "$m" | cut -d" " -f1)" \
-    HEIGHT="$HEIGHT" \
-    FONT0="$FONT0" \
-    FONT1="$FONT1" \
-    FONT2="$FONT2" \
-    FONT3="$FONT3" \
     polybar --reload top >$XDG_DATA_HOME/polybar/polybar.log 2>&1 & disown
 done
+
+# if type "xrandr" >/dev/null; then
+#   for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+#     MONITOR=$m polybar --reload top >$XDG_DATA_HOME/polybar/polybar.log 2>&1 & disown
+#   done
+# else
+#   polybar --reload top >$XDG_DATA_HOME/polybar/polybar.log 2>&1 & disown
+# fi
