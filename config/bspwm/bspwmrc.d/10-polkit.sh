@@ -10,4 +10,4 @@ if pgrep -x polkit-gnome-au >/dev/null; then
     while pgrep -x polkit-gnome-au >/dev/null; do sleep 1; done
 fi
 
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & disown

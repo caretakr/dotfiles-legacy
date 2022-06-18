@@ -10,4 +10,4 @@ if pgrep -x sxhkd >/dev/null; then
     while pgrep -x sxhkd >/dev/null; do sleep 1; done
 fi
 
-sxhkd &
+sxhkd & disown

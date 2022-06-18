@@ -1,0 +1,80 @@
+;
+; Battery config
+;
+
+[module/battery]
+type = internal/battery
+
+; Use the following command to list batteries and adapters:
+;
+;     $ ls -1 /sys/class/power_supply/
+; 
+battery = BAT0
+adapter = ADP1
+
+; Format (charging)
+format-charging = <animation-charging><label-charging>
+format-charging-margin = 12px
+format-discharging = <animation-discharging><label-discharging>
+format-discharging-margin = 12px
+format-full = <ramp-capacity><label-full>
+format-full-prefix = "<ramp-capacity>"
+format-full-margin = 12px
+format-low = <animation-discharging> <label-low>
+format-low-margin = 12px
+
+; Label (charging)
+label-charging-padding-left = 6px
+label-charging-padding-right = 12px
+label-charging-minlen = 4
+label-charging-alignment = center
+
+; Label (discharging)
+label-discharging-padding-left = 6px
+label-discharging-padding-right = 12px
+label-discharging-minlen = 4
+label-discharging-alignment = center
+
+; Label (full)
+label-full-padding-left = 6px
+label-full-padding-right = 12px
+label-full-minlen = 4
+label-full-alignment = center
+
+; Label (low)
+label-low-padding-left = 6px
+label-low-padding-right = 12px
+label-low-minlen = 4
+label-low-alignment = center
+
+; Ramp capacity
+ramp-capacity-0 = " "
+ramp-capacity-1 = " "
+ramp-capacity-2 = " "
+ramp-capacity-3 = " "
+ramp-capacity-4 = " "
+ramp-capacity-padding-left = 12px
+ramp-capacity-padding-right = 6px
+ramp-capacity-foreground = ${colors.primary}
+
+; Animation charging
+animation-charging-0 = " "
+animation-charging-1 = " "
+animation-charging-2 = " "
+animation-charging-3 = " "
+animation-charging-4 = " "
+animation-charging-framerate = 1000
+animation-charging-padding-left = 12px
+animation-charging-padding-right = 6px
+animation-charging-foreground = ${colors.primary}
+
+; Animation discharging
+animation-discharging-0 = " "
+animation-discharging-1 = " "
+animation-discharging-2 = " "
+animation-discharging-3 = " "
+animation-discharging-4 = " "
+animation-discharging-framerate = 1000
+animation-discharging-padding-left = 12px
+animation-discharging-padding-right = 6px
+animation-discharging-foreground = ${colors.alert}

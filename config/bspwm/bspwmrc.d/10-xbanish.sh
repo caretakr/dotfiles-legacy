@@ -10,4 +10,4 @@ if pgrep -x xbanish >/dev/null; then
     while pgrep -x xbanish >/dev/null; do sleep 1; done
 fi
 
-xbanish &
+xbanish & disown

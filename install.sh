@@ -14,16 +14,13 @@ if [ "$EUID" -e 0 ]; then
     echo "Please run as user: exiting..."; exit
 fi
 
-_log "Please provide the information below:"
+_log "Cloning repository..."
 
-printf "▶ (1/5) Vendor? "; read _STORAGE_DEVICE
+git clone "https://github.com/caretakr/dotfiles.git" ~/.dotfiles
 
-if [ ! -b "/dev/$_STORAGE_DEVICE" ]; then
-    _log "Vendor MUST BE \"Apple\" or \"Dell\": exiting..."; exit
-fi
+_log "Installing files..."
 
-printf "▶ (1/5) Model? "; read _STORAGE_DEVICE
+install -D -m 700 ~/.dotfiles/config/antigen/antigen.zsh ~/.config/antigen
+install -D -m 700 ~/.dotfiles/config/antigen/antigenrc ~/.config/antigen
 
-if [ ! -b "/dev/$_STORAGE_DEVICE" ]; then
-    _log "Model MUST BE \"MacBook Pro 9,2\" or \"XPS 9310\": exiting..."; exit
-fi
+

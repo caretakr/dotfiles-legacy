@@ -1,0 +1,62 @@
+;
+; Battery config
+;
+
+[module/battery]
+type = internal/battery
+
+; Use the following command to list batteries and adapters:
+;
+;     $ ls -1 /sys/class/power_supply/
+; 
+battery = BAT0
+adapter = ADP1
+
+; Format (full)
+format-full-prefix =  
+format-full-prefix-font = 2
+format-full-prefix-padding-left = 16px
+format-full-prefix-padding-right = 8px
+format-full-prefix-foreground = ${colors.primary}
+
+; Format (charging)
+format-charging-prefix = 
+format-charging-prefix-font = 2
+format-charging-prefix-padding-left = 16px
+format-charging-prefix-padding-right = 8px
+format-charging-prefix-foreground = ${colors.primary}
+
+; Format (discharging)
+format-discharging-prefix = 
+format-discharging-prefix-font = 2
+format-discharging-prefix-padding-left = 16px
+format-discharging-prefix-padding-right = 8px
+format-discharging-prefix-foreground = ${colors.alert}
+
+; Format (low)
+format-low-prefix = 
+format-low-prefix-font = 2
+format-low-prefix-padding-left = 16px
+format-low-prefix-padding-right = 8px
+format-low-prefix-foreground = ${colors.primary}
+format-low-prefix-background = ${colors.alert}
+
+; Label (full)
+label-full-padding-left = 8px
+label-full-padding-right = 16px
+label-full-minlen = 4
+
+; Label (charging)
+label-charging-padding-left = 8px
+label-charging-padding-right = 16px
+label-charging-minlen = 4
+
+; Label (discharging)
+label-discharging-padding-left = 8px
+label-discharging-padding-right = 16px
+label-discharging-minlen = 4
+
+; Label (low)
+label-low-padding-left = 8px
+label-low-padding-right = 16px
+label-low-minlen = 4

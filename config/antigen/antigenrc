@@ -1,16 +1,16 @@
-#! /bin/sh
-
 #
 # Antigen config
 #
 
-# Set bundles
-antigen bundles <<EOF
-# From Oh My ZSH
-command-not-found
-git
-gpg-agent
-sudo
+# Bundles from OMZ
+antigen bundle archlinux
+antigen bundle command-not-found
+antigen bundle git
+antigen bundle gpg-agent
+antigen bundle npm
+antigen bundle nvm
+antigen bundle rust
+antigen bundle sudo
 
 # Autosuggestions
 zsh-users/zsh-autosuggestions
@@ -26,10 +26,9 @@ zsh-users/zsh-syntax-highlighting
 
 # Alias suggestions
 MichaelAquilina/zsh-you-should-use
-EOF
 
-# Set theme
+# Set Powerlevel10k theme
 antigen theme romkatv/powerlevel10k
 
-# Apply it
+# Apply everything
 antigen apply

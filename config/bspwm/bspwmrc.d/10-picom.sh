@@ -10,4 +10,4 @@ if pgrep -x picom >/dev/null; then
     while pgrep -x picom >/dev/null; do sleep 1; done
 fi
 
-picom --experimental-backends -f &
+picom --experimental-backends -f & disown

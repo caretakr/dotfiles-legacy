@@ -10,4 +10,4 @@ if pgrep -x dunst >/dev/null; then
     while pgrep -x dunst >/dev/null; do sleep 1; done
 fi
 
-dunst &
+dunst & disown
